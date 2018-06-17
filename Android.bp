@@ -168,6 +168,7 @@ cc_library {
     name: "libjpeg",
     host_supported: true,
     vendor_available: true,
+    polly: false,
     target: {
         android: {
             lto: {
@@ -193,6 +194,7 @@ cc_library_static {
     defaults: ["libjpeg-defaults"],
     export_include_dirs: ["."],
     sdk_version: "17",
+    polly: false,
 }
 
 // Definition for TJBench
