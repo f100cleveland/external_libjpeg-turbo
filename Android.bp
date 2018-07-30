@@ -6,7 +6,6 @@ cc_defaults {
         "-O3",
         "-fstrict-aliasing",
 
-        "-Wno-sign-compare",
         "-Wno-unused-parameter",
         "-Werror",
     ],
@@ -194,12 +193,6 @@ cc_library {
     host_supported: true,
     vendor_available: true,
     target: {
-        android: {
-            lto: {
-                thin: true,
-            },
-
-        },
         // TODO(b/67474260) Turn this back on
         darwin: {
             enabled: false,
